@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number=parseInt(prompt("enter number"))    
+        let n=number
+         let digit=0
+        while(n!=0){
+            digit++
+            n=parseInt(n/10)
+        } 
+        n=number
+        let temp=0
+        let sum=0
+        
+        while(n!=0){
+            let ans=1
+            temp=n%10 
+            for(let i=0;i<digit;i++){
+                ans=ans*temp
+           }
+           n=parseInt(n/10)
+           sum=sum+ans
+        }
+        if(sum==number)
+            document.write("angstrong number")
+        else
+             document.write(" not angstrong number")                
+    </script>
+</body>
+</html>

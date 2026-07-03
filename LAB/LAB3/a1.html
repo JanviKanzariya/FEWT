@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a,b
+        a=parseInt(prompt("enter number:"))
+        b=parseInt(prompt("enter number:"))
+        let ans;
+        let op=prompt("enter +,-,*,/")
+        if(op == '+'){
+            ans=a+b;
+            document.write("ans:"+ans)
+        }
+       else if(op == '-'){
+            ans=a-b;
+            document.write("ans:"+ans)
+        }
+        else if(op == '*'){
+            ans=a*b;
+            document.write("ans:"+ans)
+        }
+        else if(op == '/'){
+        if(b!=0){
+            ans=a-b;
+            document.write("ans:"+ans)
+         }
+         else
+            alert("not divided by zero")
+        }
+        else
+            alert("invelid input")
+           
+    </script>
+</body>
+</html>

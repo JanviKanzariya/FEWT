@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">calculater</h1>
+    <table border="1" align="center">
+        <tr>
+           <td colspan="4"> <input type="text" id="display" onclick=""></td>
+        </tr>
+        <tr>
+           <td><button onclick="allClear()">AC</button></td>
+           <td><button onclick="deletelast()">-></button></td>
+           <td><button onclick="display('%')">%</button></td>
+           <td><button onclick="display('/')">/</button></td>
+        </tr>
+        <tr>
+        <td><button onclick="display(7)">7</button></td>
+        <td><button onclick="display(8)">8</button></td>
+        <td><button onclick="display(9)">9</button></td>
+        <td><button onclick="display('+')">+</button></td>
+         </tr>
+        
+         <tr>
+        <td><button onclick="display(4)">4</button></td>
+        <td><button onclick="display(5)">5</button></td>
+        <td><button onclick="display(6)">6</button></td>
+        <td><button onclick="display('-')">-</button></td>
+         </tr>
+        <tr>
+        <td><button onclick="display(1)">1</button></td>
+        <td><button onclick="display(2)">2</button></td>
+        <td><button onclick="display(3)">3</button></td>
+        <td><button onclick="display('+')">+</button></td>
+         </tr>
+         <tr>
+        <td><button onclick="display(0)">0</button></td>
+        <td><button onclick="display('.')">.</button></td>
+        <td><button onclick="display('*')">*</button></td>
+        <td><button onclick="calculate('=')">=</button></td>
+         </tr>
+        <script>
+            function display(value){
+                document.getElementById('display').value +=value
+            }
+            function allClear(){
+                document.getElementById('display').value=""
+            }
+            function deletelast(){
+                exp=document.getElementById('display').value
+                del=exp.slice(0,-1);
+              document.getElementById('display').value = del;
+            }
+            function calculate(){
+                exp=document.getElementById('display').value
+                ans=eval(exp);
+                document.getElementById('display').value=ans;
+            }
+        </script>
+        
+    </table>
+</body>
+</html>
